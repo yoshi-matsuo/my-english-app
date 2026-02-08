@@ -191,9 +191,9 @@ export async function POST(request: Request) {
     }
 
     const apiKey = process.env.DEEPL_API_KEY;
-    if (apiKey = process.env.NEWS_API_KEY;) {
+    if (!apiKey) {
       return NextResponse.json(
-        { error: "d785ad90-4d23-4193-862d-6d0b01879dfd:fx" },
+        { error: "APIキーが設定されていません" },
         { status: 500 }
       );
     }

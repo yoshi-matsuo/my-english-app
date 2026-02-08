@@ -146,7 +146,7 @@ export async function GET() {
     // 並列で全ソースから取得
     const [rssSentences, newsSentences] = await Promise.all([
       fetchFromRSS(),
-      apiKey && apiKey !== "your_newsapi_key_here"
+      apiKey && apiKey !== "4b40143817794246b38cff1e69f76c17"
         ? fetchFromNewsAPI(apiKey)
         : Promise.resolve([]),
     ]);
